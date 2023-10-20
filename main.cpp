@@ -26,6 +26,13 @@ public:
 
 enum  CatchState{No, Fish, Boot};
 
+void printField(int (&field)[9]){
+    for(int i = 0; i < 9; ++i){
+        std::cout << field[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
 int main(){
     std::srand(std::time(nullptr));
     int field[9]{};
@@ -38,6 +45,7 @@ int main(){
             ++count;
         }
     }
+    printField(field);
     std::cout <<" ";
 
 
